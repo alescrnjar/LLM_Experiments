@@ -6,6 +6,7 @@ The custom dataset "test_dataset.csv" contains information about age, marriage s
 # Agents
 
 Use LLM Agents for question answering by using tools such as math calculations, access to private information, consultation of webpages, et cetera.
+Robustness to hallucinations is also tested.
 
 # Required Libraries 
 
