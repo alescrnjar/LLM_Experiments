@@ -12,3 +12,4 @@ Robustness to hallucinations is also tested.
 
 * langchain 0.1.11
 * openai 1.11.1
+* langchainhub-0.1.15
