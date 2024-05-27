@@ -12,7 +12,11 @@ Robustness to hallucinations is also tested.
 
 # RAG
 
-Perform a simple Retrieval Augmented Generation (RAG) to ask a question relative to the content of an example document.
+Perform a simple Retrieval Augmented Generation (RAG) to ask a question relative to the content of an example document. A minimal script is provided, with the following workflow:
+* Divide the input PDF into chunks of size 1000, with no overlap.
+* Generate a retriever object with the FAISS vector store and with cosine similarity as the distance strategy.
+* Extract the top scoring k=4 chunks, i.e. the most relevant for answering the user's question.
+* Use these chunks to construct the final chain for answering the question.
 
 # Required Libraries 
 
