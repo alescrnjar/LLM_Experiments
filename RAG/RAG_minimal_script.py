@@ -20,9 +20,9 @@ def get_text_splits_for_pdf_files(pdf_files, chunk_size=1000, chunk_overlap=0):
             all_splits.append(spl)
     return all_splits
 
-def get_retriever_for_pdf_files(all_splits, k_to_retrieve=4, vectorestore='FAISS', distance_strategy='COSINE'): # ['COSINE','EUCLIDEAN_DISTANCE','MAX_INNER_PRODUCT','DOT_PRODUCT','JACCARD']: #https://api.python.langchain.com/en/latest/vectorstores/langchain_community.vectorstores.utils.DistanceStrategy.html#langchain_community.vectorstores.utils.DistanceStrategy
+def get_retriever_for_pdf_files(all_splits, k_to_retrieve=4, vectorstore='FAISS', distance_strategy='COSINE'): # ['COSINE','EUCLIDEAN_DISTANCE','MAX_INNER_PRODUCT','DOT_PRODUCT','JACCARD']: #https://api.python.langchain.com/en/latest/vectorstores/langchain_community.vectorstores.utils.DistanceStrategy.html#langchain_community.vectorstores.utils.DistanceStrategy
     embeddings = langchain_openai.OpenAIEmbeddings()
-    if vectorestore=='FAISS':
+    if vectorstore=='FAISS':
         db = langchain_community.vectorstores.FAISS.from_documents(all_splits, embeddings, distance_strategy=distance_strategy)
     retriever = db.as_retriever(search_kwargs={'k': k_to_retrieve})
     return retriever
