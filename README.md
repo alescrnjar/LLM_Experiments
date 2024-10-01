@@ -18,9 +18,9 @@ Perform a simple Retrieval Augmented Generation (RAG) to ask a question relative
 * Extract the top scoring k=4 chunks, i.e. the most relevant for answering the user's question.
 * Use these chunks to construct the final chain for answering the question.
 
-# GraphRAG
+# Knowledge Graph Extraction + Q & A
 
-Perform a simple GraphRAG to ask a question relative to the content of an example text. GraphRAG performs better when the answer to a question relies on the knowledge of the context as a whole, rather than on one or multiple specific chunks. The script makes use of LLMGraphTransformer from langchain_experimental (version: 0.0.62). The knowledge graph is plotted with libraries networkx and matplotlib.
+Extract a knowledge graph from an example text, and perform question answering based on the extracted graph. The script makes use of LLMGraphTransformer from langchain_experimental (version: 0.0.62). The knowledge graph is plotted with libraries networkx and matplotlib.
 
 # Required Libraries 
 
