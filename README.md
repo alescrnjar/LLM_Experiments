@@ -33,3 +33,4 @@ LangGraph allows for the engineering of the prompt chain. Operations such as doc
 * langchainhub-0.1.15
 * langchain-community: 0.2.9
 * langchain-experimental: 0.0.62
+* langgraph: 0.1.8
