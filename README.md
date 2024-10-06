@@ -22,6 +22,10 @@ Perform a simple Retrieval Augmented Generation (RAG) to ask a question relative
 
 Extract a knowledge graph from an example text, and perform question answering based on the extracted graph. The script makes use of LLMGraphTransformer from langchain_experimental (version: 0.0.62). The knowledge graph is plotted with libraries networkx and matplotlib.
 
+# LangGraph
+
+LangGraph allows for the engineering of the prompt chain. Operations such as document retrieval, web retrieval, generation, evaluation, et cetera are defined as nodes on a graph that can be directly designed by the user.  In the dedicated folder, I provide a simple template that can be adjusted for custom cases.
+
 # Required Libraries 
 
 * langchain 0.1.11
