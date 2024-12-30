@@ -32,6 +32,13 @@ I use llama-index for fine tuning of an embedding model, to be used in a langcha
 * finetune the model
 * use the new embeddings in the langchain script.
 
+# GraphRAG
+
+GraphRAG leverages on the construction of a knowledge graph from the text corpus and uses community summaries to answer the user query. This allows for a better performance on questions that benefits from an understanding of the overall text. GraphRAG is divided into two stages:
+* Indexing: the actual build up of the communities. It needs to be done only once, at it is typically an expensive step.
+* Querying: leverages the communities for addressing the user question. Querying can be done in  either global mode or local mode.
+Here, I use microsoft graphrag package to perform both stages: I take care of indexing with a pre made script, then perform a global query in a python script.
+
 # Required Libraries 
 
 * langchain 0.1.11
