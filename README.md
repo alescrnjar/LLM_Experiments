@@ -1,4 +1,4 @@
-In this repository, I explore several prompt engineering techniques made possible by the library LangChain. Each directory contains a separate case, which I describe in the following:
+In this repository, I explore several LLM techniques mainly through the usage of the library LangChain. Each directory contains a separate case, which I describe in the following:
 
 # SQL Table Agent
 
