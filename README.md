@@ -1,4 +1,4 @@
-In this repository, I explore several prompt engineering techniques made possible by the library LangChain. Each folder contains a separate case, which I describe in the following:
+In this repository, I explore several prompt engineering techniques made possible by the library LangChain. Each directory contains a separate case, which I describe in the following:
 
 # SQL Table Agent
 
@@ -24,7 +24,13 @@ Extract a knowledge graph from an example text, and perform question answering b
 
 # LangGraph
 
-LangGraph allows for the engineering of the prompt chain. Operations such as document retrieval, web retrieval, generation, evaluation, et cetera are defined as nodes on a graph that can be directly designed by the user.  In the dedicated folder, I provide a simple template that can be adjusted for custom cases.
+LangGraph allows for the engineering of the prompt chain. Operations such as document retrieval, web retrieval, generation, evaluation, et cetera are defined as nodes on a graph that can be directly designed by the user.  In the dedicated directory, I provide a simple template that can be adjusted for custom cases.
+
+# Fine Tune Embeddings
+I use llama-index for fine tuning of an embedding model, to be used in a langchain RAG pipeline for document retrieval, according to the dedicated llama-index tutorial. I follow these steps:
+* generate question-answer pairs from the training corpus of text.
+* finetune the model
+* use the new embeddings in the langchain script.
 
 # Required Libraries 
 
@@ -34,3 +40,6 @@ LangGraph allows for the engineering of the prompt chain. Operations such as doc
 * langchain-community: 0.2.9
 * langchain-experimental: 0.0.62
 * langgraph: 0.1.8
+* (Finetuning) llama-index: 0.10.19
+* (Finetuning) llama-index.core: 0.10.19
+* (Finetuning) sentence_transformers: 2.2.2
