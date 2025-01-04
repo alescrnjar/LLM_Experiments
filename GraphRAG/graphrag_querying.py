@@ -1,4 +1,3 @@
-# https://microsoft.github.io/graphrag/posts/query/notebooks/global_search_nb/
 import os
 import asyncio
 
@@ -84,7 +83,7 @@ def global_graphrag(
     )
 
     async def get_result(query=question):
-        #result = await search_engine.asearch(    "What is the major conflict in this story and who are the protagonist and antagonist?")
+        #result = await search_engine.asearch("What is the major conflict in this story and who are the protagonist and antagonist?")
         result = await search_engine.asearch(query)
         #print(result.context_text)
         # inspect the data used to build the context for the LLM responses
@@ -99,17 +98,17 @@ def global_graphrag(
 
 if __name__=='__main__':
 
+    """
+    https://microsoft.github.io/graphrag/posts/query/notebooks/global_search_nb/
+    Global Search for reasoning about holistic questions about the corpus by leveraging the community summaries.
+    Local Search for reasoning about specific entities by fanning-out to their neighbors and associated concepts.
+    """
+
     inputdir='./parquet_library_safecopies/'
-    #chosen_model='gpt-3.5-turbo-1106'
     chosen_model='gpt-4o-mini'
     question='Which speaker faced challenges regarding regulations and informed consent when putting cells into culture?'
 
     #####
-
-    """
-    Global Search for reasoning about holistic questions about the corpus by leveraging the community summaries.
-    Local Search for reasoning about specific entities by fanning-out to their neighbors and associated concepts.
-    """
 
     key_file='../LM_Tests/openai_api_key.txt'
     with open(key_file, 'r') as file:
@@ -138,6 +137,4 @@ if __name__=='__main__':
 
     print("SCRIPT END.")
 
-"""
-TODO: Cost!
-"""
+
